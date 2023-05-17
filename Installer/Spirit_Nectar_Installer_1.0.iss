@@ -63,6 +63,9 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 Filename: "{tmp}\VC_redist.x64.exe"; WorkingDir: "{tmp}"; \
   Flags: waituntilterminated; \
   StatusMsg: "Installing C++ Runtime..."
+Filename: "{tmp}\directx\DXSETUP.exe"; WorkingDir: "{tmp}"; \
+  Flags: waituntilterminated; \
+  StatusMsg: "Installing DirectX components..."
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; \
   Flags: nowait postinstall skipifsilent
 
